@@ -29,7 +29,7 @@ void printColorNumber(int num, string color) {
 }
 
 // Función para generar un código Hamming basado en los datos proporcionados
-vector<int> generateHammingCode(vector<int> &data) {
+vector<bool> generateHammingCode(vector<bool> &data) {
     auto start = high_resolution_clock::now(); // Inicio del temporizador
     
     int m = data.size(); // Número de bits de datos
@@ -40,7 +40,7 @@ vector<int> generateHammingCode(vector<int> &data) {
         r++;
     }
     
-    vector<int> hammingCode(m + r + 1, 0); // Inicializa el código Hamming con ceros
+    vector<bool> hammingCode(m + r + 1, 0); // Inicializa el código Hamming con ceros
     
     // Información inicial
     cout << "\nPROCESO DE GENERACIÓN DEL CÓDIGO HAMMING" << endl;
@@ -106,7 +106,7 @@ vector<int> generateHammingCode(vector<int> &data) {
 }
 
 // Función para introducir un error aleatorio en el código Hamming
-void introduceRandomError(vector<int> &hammingCode) {
+void introduceRandomError(vector<bool> &hammingCode) {
     srand(time(0)); // Inicializa el generador de números aleatorios
     int randomPos = rand() % (hammingCode.size() - 1) + 1; // Genera una posición aleatoria
     cout << "Introduciendo error en posición " << randomPos << ":" << endl;
@@ -118,7 +118,7 @@ void introduceRandomError(vector<int> &hammingCode) {
     }
     cout << endl;
     
-    hammingCode[randomPos] ^= 1; // Invierte el bit en la posición aleatoria
+    hammingCode[randomPos] = !hammingCode[randomPos]; // Invierte el bit en la posición aleatoria
     
     cout << "Err |";
     for (int i = 1; i < hammingCode.size(); i++) {
@@ -132,7 +132,7 @@ void introduceRandomError(vector<int> &hammingCode) {
 }
 
 // Función para detectar y corregir un error en el código Hamming
-int detectAndCorrectError(vector<int> &hammingCode) {
+int detectAndCorrectError(vector<bool> &hammingCode) {
     auto start = high_resolution_clock::now(); // Inicio del temporizador
     
     int n = hammingCode.size();
@@ -172,7 +172,7 @@ int detectAndCorrectError(vector<int> &hammingCode) {
     // Corrige el error si se detectó
     if (errorPos != 0) {
         cout << "\nError detectado en posición " << errorPos << endl;
-        hammingCode[errorPos] ^= 1; // Corrige el bit
+        hammingCode[errorPos] = !hammingCode[errorPos]; // Corrige el bit
         
         printDivider(n * 3 + 5);
         cout << "Cor |";
@@ -202,15 +202,18 @@ int main() {
     cin >> input; // Lee el mensaje binario
     
     // Convierte el mensaje en un vector de enteros
-    vector<int> data(input.size());
+    vector<bool> data(input.size());
     for (size_t i = 0; i < input.size(); i++) {
         data[i] = input[i] - '0';
     }
     
     // Genera el código Hamming, introduce un error y lo corrige
-    vector<int> hammingCode = generateHammingCode(data);
+    vector<bool> hammingCode = generateHammingCode(data);
     introduceRandomError(hammingCode);
     detectAndCorrectError(hammingCode);
     
     return 0;
 }
+
+
+
