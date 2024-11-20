@@ -14,5 +14,5 @@ Curso: Datos II
   * `sudo apt install cmake` 
 
 # Compilacion y Ejecucion  
-Hay que realizar la build del CMakeLists.txt, una vez realizada esta simplemente se corre el main.cpp.
+Hay que realizar la build del CMakeLists.txt, una vez realizada esta simplemente se corre el main.cpp.  
 Al correr el main.cpp se solicita ingresar el mensaje binario a partir del cual se desea crear el codigo Hamming.
