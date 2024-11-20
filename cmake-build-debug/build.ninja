@@ -41,35 +41,53 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/quick/CLionProjects/Codigo-Hamming-P3/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target untitled2
+# Object build statements for EXECUTABLE target Hamming
 
 
 #############################################
-# Order-only phony target for untitled2
+# Order-only phony target for Hamming
 
-build cmake_object_order_depends_target_untitled2: phony || .
+build cmake_object_order_depends_target_Hamming: phony || .
 
-build CMakeFiles/untitled2.dir/main.cpp.o: CXX_COMPILER__untitled2_unscanned_Debug /home/quick/CLionProjects/Codigo-Hamming-P3/main.cpp || cmake_object_order_depends_target_untitled2
-  DEP_FILE = CMakeFiles/untitled2.dir/main.cpp.o.d
+build CMakeFiles/Hamming.dir/main.cpp.o: CXX_COMPILER__Hamming_unscanned_Debug /home/quick/CLionProjects/Codigo-Hamming-P3/main.cpp || cmake_object_order_depends_target_Hamming
+  DEP_FILE = CMakeFiles/Hamming.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/untitled2.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled2.dir
+  OBJECT_DIR = CMakeFiles/Hamming.dir
+  OBJECT_FILE_DIR = CMakeFiles/Hamming.dir
+
+build CMakeFiles/Hamming.dir/utilities.cpp.o: CXX_COMPILER__Hamming_unscanned_Debug /home/quick/CLionProjects/Codigo-Hamming-P3/utilities.cpp || cmake_object_order_depends_target_Hamming
+  DEP_FILE = CMakeFiles/Hamming.dir/utilities.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Hamming.dir
+  OBJECT_FILE_DIR = CMakeFiles/Hamming.dir
+
+build CMakeFiles/Hamming.dir/hamming_generation.cpp.o: CXX_COMPILER__Hamming_unscanned_Debug /home/quick/CLionProjects/Codigo-Hamming-P3/hamming_generation.cpp || cmake_object_order_depends_target_Hamming
+  DEP_FILE = CMakeFiles/Hamming.dir/hamming_generation.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Hamming.dir
+  OBJECT_FILE_DIR = CMakeFiles/Hamming.dir
+
+build CMakeFiles/Hamming.dir/error_handling.cpp.o: CXX_COMPILER__Hamming_unscanned_Debug /home/quick/CLionProjects/Codigo-Hamming-P3/error_handling.cpp || cmake_object_order_depends_target_Hamming
+  DEP_FILE = CMakeFiles/Hamming.dir/error_handling.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Hamming.dir
+  OBJECT_FILE_DIR = CMakeFiles/Hamming.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target untitled2
+# Link build statements for EXECUTABLE target Hamming
 
 
 #############################################
-# Link the executable untitled2
+# Link the executable Hamming
 
-build untitled2: CXX_EXECUTABLE_LINKER__untitled2_Debug CMakeFiles/untitled2.dir/main.cpp.o
+build Hamming: CXX_EXECUTABLE_LINKER__Hamming_Debug CMakeFiles/Hamming.dir/main.cpp.o CMakeFiles/Hamming.dir/utilities.cpp.o CMakeFiles/Hamming.dir/hamming_generation.cpp.o CMakeFiles/Hamming.dir/error_handling.cpp.o
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/untitled2.dir
+  OBJECT_DIR = CMakeFiles/Hamming.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = untitled2
-  TARGET_PDB = untitled2.dbg
+  TARGET_FILE = Hamming
+  TARGET_PDB = Hamming.dbg
 
 
 #############################################
@@ -105,7 +123,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/quick/CLionProjects/Codigo-Hamming-P3/cmake-build-debug
 
-build all: phony untitled2
+build all: phony Hamming
 
 # =============================================================================
 # Built-in targets
