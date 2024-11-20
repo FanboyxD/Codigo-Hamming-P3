@@ -3,4 +3,4 @@ project(Codigo-Hamming-P3)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(untitled2 main.cpp)
+add_executable(Hamming main.cpp)
