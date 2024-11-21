@@ -10,4 +10,6 @@ add_executable(Hamming main.cpp
         hamming_generation.cpp
         error_handling.h
         error_handling.cpp
+        hamming_decode.h
+        hamming.decode.cpp
 )

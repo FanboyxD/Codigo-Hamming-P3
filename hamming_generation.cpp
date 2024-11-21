@@ -3,6 +3,11 @@
 
 #include "hamming_generation.h"
 
+#include <cmath>
+#include <iostream>
+
+#include "utilities.h"
+
 std::vector<bool> generateHammingCode(std::vector<bool> &data) {
     auto start = std::chrono::high_resolution_clock::now(); // Inicio del temporizador
     

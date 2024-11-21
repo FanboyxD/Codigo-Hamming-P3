@@ -1,5 +1,7 @@
 #include "utilities.h"
 
+#include <iostream>
+
 void printDivider(int width) {
     std::cout << std::string(width, '-') << std::endl;
 }

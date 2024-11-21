@@ -2,11 +2,7 @@
 #define ERROR_HANDLING_H
 
 #include <vector>
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include <chrono>
-#include "utilities.h"
+
 
 // Función para introducir un error aleatorio en el código Hamming
 void introduceRandomError(std::vector<bool> &hammingCode);

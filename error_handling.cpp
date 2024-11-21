@@ -1,6 +1,10 @@
 #include "error_handling.h"
 
+#include <chrono>
 #include <cmath>
+#include <iostream>
+
+#include "utilities.h"
 
 void introduceRandomError(std::vector<bool> &hammingCode) {
     std::srand(std::time(0)); // Inicializa el generador de números aleatorios
